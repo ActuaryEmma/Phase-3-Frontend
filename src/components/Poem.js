@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-// import AddComment from './AddComment';
+import AddComment from './AddComment';
 import "./App.css";
 
 function Poem({poemtitle, poembody, poemid, commentData, setCommentData, comments, userid}){
@@ -16,7 +16,7 @@ function Poem({poemtitle, poembody, poemid, commentData, setCommentData, comment
            <div >
            <p className="poem">{poembody}</p> <hr/>
            <p >{comments}</p>
-           {/* <AddComment poemid={poemid} commentData={commentData} setCommentData={setCommentData} userid={userid}/>  */}
+           <AddComment poemid={poemid} commentData={commentData} setCommentData={setCommentData} userid={userid}/> 
            
            </div>
             

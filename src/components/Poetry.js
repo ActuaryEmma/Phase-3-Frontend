@@ -7,22 +7,22 @@ function Poetry({ poem, setPoem, commentData, setCommentData }) {
   const [searchItem, setSearchItem] = useState("");
 
   // fetch users
-//   const[userData, setUserData] = useState([])
-//     useEffect(() => {
-//         fetch("http://localhost:9292/user")
-//         .then((response) => response.json())
-//         .then((data) => setUserData(data))
-//     },[])
-//     const userids = userData.map((item) => item.id)
-//     let arrlength = userids.length
-//     let random = Math.floor(Math.random() * arrlength)
-//     let userid = userids[random]
-//     console.log(userid)
+  const[userData, setUserData] = useState([])
+    useEffect(() => {
+        fetch("http://localhost:9292/user")
+        .then((response) => response.json())
+        .then((data) => setUserData(data))
+    },[])
+    const userids = userData.map((item) => item.id)
+    let arrlength = userids.length
+    let random = Math.floor(Math.random() * arrlength)
+    let userid = userids[random]
+    console.log(userid)
 
-    // function handleDelete(deletePoem){
-    //   const updatePoem = poem.filter((item) => item.id !== deletePoem.id);
-    //   setPoem(updatePoem)
-    // }
+    function handleDelete(deletePoem){
+      const updatePoem = poem.filter((item) => item.id !== deletePoem.id);
+      setPoem(updatePoem)
+    }
  
   function searchText(event) {
     console.log(event.target.value);
@@ -100,7 +100,7 @@ function Poetry({ poem, setPoem, commentData, setCommentData }) {
                 poemid={item.id}
                 commentData={commentData}
                 setCommentData={setCommentData}
-                // userid={userid}
+                userid={userid}
               />
             );
           })}
