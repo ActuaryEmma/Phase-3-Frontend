@@ -1,24 +1,60 @@
 import React from 'react';
 
-function DeleteComment({id, poem, commentData, setCommentData, onDelete}){
+function DeleteComment({id, poem, commentData, setCommentData, onDelete, setPoem, poem_id}){
+
+    // function handleDelete(deleteComment) {
+    //     console.log(poem_id)
+    //     const updatePoem = poem.find(poem_id).comments.filter(
+    //       (item) => item.id !== deleteComment.id
+    //     );
+    //     setPoem(updatePoem);
+    //   }
     
-    function handleDelete(){
+    function handleDeleteClick(){
         
         fetch(`http://localhost:9292/poem/comments/${id}`, {
             method: 'DELETE'
         
         })
         .then((res) => res.json())
-        .then(() => onDelete(poem)
+        .then(() => {
+            console.log(poem)
+        
+            let findPoem = poem.find((poemitem) => poemitem.id === poem_id)
+            console.log(findPoem)
+            console.log(findPoem.comments)
 
-            // const newData = commentData.filter((data) => data.id !== id)
-            // setCommentData(newData)
+            let updateComments = findPoem.comments.filter(
+                (item) => item.id !== id
+              );
+                console.log(updateComments)
+
+             let y = findPoem.comments = updateComments 
+             console.log(findPoem.comments)
+             console.log(poem)
+
+            setPoem(poem);
+            
+            
+        })
+
+      
+        //   .then(() => handleDelete(poem))
+        // .then(() => {
+            // console.log(poem)
+            // console.log(commentData)
+            // console.log(id)
+            // const newData = poem.filter((data) => data.id !== id)
+            // setPoem(newData)
             // console.log(newData)
-        )
+            // console.log(poem)
+            
+        
+        // })
     }
     return(
         <div>
-            <button onClick={handleDelete}>Delete</button>
+            <button onClick={() => handleDeleteClick}>Delete</button>
         </div>
     )
 }

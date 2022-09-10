@@ -1,10 +1,8 @@
-import React, {useState} from 'react';
+import React  from 'react';
 import AddComment from './AddComment';
 import "./App.css";
 
 function Poem({poemtitle, poembody, poemid, commentData, setCommentData, comments, userid}){
-
-   
 
 
     return(
