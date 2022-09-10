@@ -14,7 +14,6 @@ function AddComment({commentData, setCommentData, poemid, userid}){
       }
     function handleSubmit(e){
         e.preventDefault();
-        // form.reset()
         fetch("http://localhost:9292/poem", {
         method: "POST",
         headers: {
