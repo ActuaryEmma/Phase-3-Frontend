@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Poem from "./Poem";
+import DeleteComment from "./DeleteComment";
 
 function Poetry({ poem, setPoem, commentData, setCommentData }) {
 
@@ -79,7 +80,7 @@ function Poetry({ poem, setPoem, commentData, setCommentData }) {
                       commentData={commentData}
                       setCommentData={setCommentData}
                       /> */}
-                      {/* <DeleteComment
+                      <DeleteComment
                         key={item.id}
                         id={item.id}
                         user={item.user.name}
@@ -89,7 +90,7 @@ function Poetry({ poem, setPoem, commentData, setCommentData }) {
                         onDelete={handleDelete}
                         poem={poem}
 
-                      /> */}
+                      />
                    
                      
                      
