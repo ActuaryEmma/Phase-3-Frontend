@@ -1,0 +1,42 @@
+import React, { useState } from "react";
+import Edit from "./Edit";
+
+function EditComment({
+  id,
+  comment,
+  poem,
+  setPoem,
+  commentData,
+  setCommentData,
+  setIsEditing,
+}) {
+  const [commentBody, setCommentBody] = useState(comment);
+  const [isHidden, setIsHidden] = useState(true);
+
+  function handlehide() {
+    setIsHidden((isHidden) => !isHidden);
+  }
+
+  function handleUpdateComment(updatedComments) {
+    const updateComments = commentData.map((item) =>
+      item.id === updatedComments.id ? updatedComments : item
+    );
+    setCommentData(updateComments);
+  }
+
+  return (
+    <div>
+      {isHidden ? null : (
+        <Edit
+          commentBody={commentBody}
+          setCommentBody={setCommentBody}
+          setIsHidden={setIsHidden}
+          onHandleUpdateComment={handleUpdateComment}
+          id={id}
+        />
+      )}
+      <button onClick={handlehide}>✏️</button>
+    </div>
+  );
+}
+export default EditComment;
