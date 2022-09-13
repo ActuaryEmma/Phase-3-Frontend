@@ -1,7 +1,7 @@
 import React from "react";
 function About() {
   return (
-    <div style={{ backgroundColor: "#ffe4c4", color: "black" }}>
+    <div style={{ backgroundColor: "#cd853f", color: "black" }}>
       <div className=" container position-relative  justify-content-around align-items-center ">
         <h1 style={{ textAlign: "center" }}>What Is Write Out Loud?</h1>
         <p>

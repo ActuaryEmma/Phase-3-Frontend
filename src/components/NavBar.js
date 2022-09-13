@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-
-    <div>
+    <nav className="bg-light " >
+      <div>
       <ul className="nav justify-content-center">
       <li>
         <Link className="nav-link" to="/home">Home</Link>
@@ -23,6 +23,8 @@ function NavBar() {
       </li>
       </ul>
       </div>
+    </nav>
+    
   );
 }
 export default NavBar;

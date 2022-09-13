@@ -1,70 +1,96 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### API documentation
+https://docs.google.com/document/d/12tnN_YsNtlxVc3M_ZcT0y7T75NORBNb9XtT3ZxoVIS8/edit?usp=sharing
 
-In the project directory, you can run:
+### Backend github repository
+https://github.com/ActuaryEmma/phase-3-sinatra-react-project
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### REQUIREMENTS
+Your react applications must at least include but not limited to:
+Two(2) custom hooks.
+Five (5) routes.
+For all your components, have at most; 50% of them being stateful. (Ensure you lift state as much as possible)
 
-### `npm test`
+### 
+The Application is a single page app that has list of Poems where users can comment on each poem . 
+The App has 5 components i.e Home , About , Contact , Profiles and Poetry Blogs.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Home Page
 
-### `npm run build`
+This is the landing page and has a Learn more button which directs you to a Poetry Blog page as below:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### About Page
+The page has details and history about the application
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Contact Page
+The page has contacts that the user can use to contact or has any general information to share with the team
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Profile Page
+the app uses a get request to display Biography  of  different Poets. 
 
-### `npm run eject`
+### Poetry Blog
+The page contains list of Poems with comments from users.
+The app uses :
+- get request to display all Poems with comments and comments authors
+- post request to Create a new comment and display a random user from User's API
+- patch request to update the comments
+- delete request to delete comments plus the author of the comment.
+  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Backend Repository
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Create an API with Sinatra for a React frontend application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The Application uses Active Record gem to generate your ORMs.
+The Application has 4 models: user, poem, comments and PoemAuthors
 
-### Code Splitting
+comments belongs_to user
+comments belongs_to poem
+user has_many_comments
+poem has_many_comments
+user has_many poems through comments
+poem has_many users through comments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Model
+User has below attributes:
+name:string
 
-### Analyzing the Bundle Size
+Poem has below attributes:
+title: string
+description: string
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Comment has below attributes:
+comment: string
+user_id:integer
+poem_id: integer
 
-### Making a Progressive Web App
+PoemAuthor has below attributes:
+name: string
+publication: string
+major_achievements: string
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+Seed.rb file has sample data for all the tables.wh
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Appication Controller
+The App has Application Controller where all routes are listed as per below link
+https://docs.google.com/document/d/12tnN_YsNtlxVc3M_ZcT0y7T75NORBNb9XtT3ZxoVIS8/edit?usp=sharing
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+
+
+

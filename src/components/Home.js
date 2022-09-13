@@ -11,7 +11,7 @@ function Home() {
     }
 
   return (
-    <div className="bg-dark">
+    <div style={{ backgroundColor: "black"}}>
       <div className="container position-relative  d-flex justify-content-around align-items-center ">
         <img
           src={home}
