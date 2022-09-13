@@ -29,32 +29,31 @@ function DeleteComment({id, poem, commentData, setCommentData, onDelete, setPoem
               );
                 console.log(updateComments)
 
-             let y = findPoem.comments = updateComments 
+             findPoem.comments = updateComments 
              console.log(findPoem.comments)
              console.log(poem)
 
-            setPoem(poem);
+            setCommentData(updateComments);
+            // window.location.reload()
             
             
         })
 
-      
-        //   .then(() => handleDelete(poem))
         // .then(() => {
-            // console.log(poem)
-            // console.log(commentData)
-            // console.log(id)
-            // const newData = poem.filter((data) => data.id !== id)
-            // setPoem(newData)
-            // console.log(newData)
-            // console.log(poem)
+        //     console.log(poem)
+        //     console.log(commentData)
+        //     console.log(id)
+        //     const newData = poem.filter((data) => data.id !== id)
+        //     setPoem(newData)
+        //     console.log(newData)
+        //     console.log(poem)
             
         
         // })
     }
     return(
         <div>
-            <button onClick={() => handleDeleteClick}>Delete</button>
+            <button onClick={handleDeleteClick}>Delete</button>
         </div>
     )
 }

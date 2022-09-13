@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function AddComment({commentData, setCommentData, poemid, userid}){
+function AddComment({poemid, userid, poem, setPoem, commentData, setCommentData}){
     
     const[newObj, setNewObj] = useState({
        comment: "",
@@ -14,7 +14,7 @@ function AddComment({commentData, setCommentData, poemid, userid}){
       }
     function handleSubmit(e){
         e.preventDefault();
-        fetch("http://localhost:9292/poem", {
+        fetch("http://localhost:9292/comments", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -22,7 +22,33 @@ function AddComment({commentData, setCommentData, poemid, userid}){
         body: JSON.stringify(newObj)
     })
     .then((response) => response.json())
-    .then((newdata) => setCommentData([...commentData, newdata]))
+    .then((newData) => {
+
+        // setCommentData([...commentData, newData])
+        // console.log(newData)
+        // console.log(commentData)
+        let x = [...commentData, newData]
+        console.log(x)
+        setCommentData(x)
+        console.log(commentData)
+        
+    } 
+
+    
+    
+
+    // {
+        // console.log(poem)
+    
+        // let poemfind = poem.find((poemitem) => poemitem.id === poemid)
+        // let data = [...poemfind.comments, newData]
+        // poemfind.comments = data
+        // console.log(poem)
+        // setCommentData(data)
+       
+        
+    // }
+    )
 
     setNewObj({
         comment: ""
