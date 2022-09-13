@@ -44,3 +44,12 @@
   display: flex;
    
 }
+
+
+.poemcontainer{
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80%;
+    margin:10px auto;
+}

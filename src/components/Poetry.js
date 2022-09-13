@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Poem from "./Poem";
 import DeleteComment from "./DeleteComment";
 import EditComment from "./EditComment";
+import useQuery from "./UseQuery";
+
 
 function Poetry({ poem, setPoem, commentData, setCommentData }) {
   const [searchItem, setSearchItem] = useState("");
@@ -14,6 +16,8 @@ function Poetry({ poem, setPoem, commentData, setCommentData }) {
       .then((response) => response.json())
       .then((data) => setUserData(data));
   }, []);
+
+  // const{data: userData, setData: setUserData} = useQuery("http://localhost:9292/user")
   const userids = userData.map((item) => item.id);
   let arrlength = userids.length;
   let random = Math.floor(Math.random() * arrlength);
@@ -24,11 +28,15 @@ function Poetry({ poem, setPoem, commentData, setCommentData }) {
     console.log(event.target.value);
     setSearchItem(event.target.value);
   }
+
+  
   useEffect(() => {
     fetch("http://localhost:9292/poem")
       .then((response) => response.json())
       .then((data) => setPoem(data));
   }, [commentData]);
+
+  
 
   useEffect(() => {
     fetch("http://localhost:9292/comments")

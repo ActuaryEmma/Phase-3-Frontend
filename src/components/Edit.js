@@ -2,6 +2,8 @@ import React from 'react';
 
 function Edit({id,commentBody, setCommentBody, setIsHidden, onHandleUpdateComment}){
 
+
+
     function handleChange(event) {
         let updatedComment = event.target.value;
         console.log(updatedComment);

@@ -24,9 +24,6 @@ function AddComment({poemid, userid, poem, setPoem, commentData, setCommentData}
     .then((response) => response.json())
     .then((newData) => {
 
-        // setCommentData([...commentData, newData])
-        // console.log(newData)
-        // console.log(commentData)
         let x = [...commentData, newData]
         console.log(x)
         setCommentData(x)
@@ -34,20 +31,6 @@ function AddComment({poemid, userid, poem, setPoem, commentData, setCommentData}
         
     } 
 
-    
-    
-
-    // {
-        // console.log(poem)
-    
-        // let poemfind = poem.find((poemitem) => poemitem.id === poemid)
-        // let data = [...poemfind.comments, newData]
-        // poemfind.comments = data
-        // console.log(poem)
-        // setCommentData(data)
-       
-        
-    // }
     )
 
     setNewObj({

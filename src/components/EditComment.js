@@ -4,11 +4,9 @@ import Edit from "./Edit";
 function EditComment({
   id,
   comment,
-  poem,
-  setPoem,
   commentData,
   setCommentData,
-  setIsEditing,
+  
 }) {
   const [commentBody, setCommentBody] = useState(comment);
   const [isHidden, setIsHidden] = useState(true);
