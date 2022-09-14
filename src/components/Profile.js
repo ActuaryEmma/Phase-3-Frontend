@@ -5,13 +5,15 @@ import useQuery from "./UseQuery";
 
 function Profile(){
 
+    
+    const{data: poet, setData: setPoet} = useQuery("http://localhost:9292/poemauthor")
 
-    const[poet, setPoet] = useState([])
-    useEffect(() => {
-        fetch("http://localhost:9292/poemauthor")
-        .then((response) => response.json())
-        .then((data) => setPoet(data))
-    },[])
+    // const[poet, setPoet] = useState([])
+    // useEffect(() => {
+    //     fetch("http://localhost:9292/poemauthor")
+    //     .then((response) => response.json())
+    //     .then((data) => setPoet(data))
+    // },[])
    
     return(
     <div className="poemcontainer">

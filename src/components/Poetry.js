@@ -9,14 +9,14 @@ function Poetry({ poem, setPoem, commentData, setCommentData }) {
   const [searchItem, setSearchItem] = useState("");
 
   // fetch users
-  const [userData, setUserData] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:9292/user")
-      .then((response) => response.json())
-      .then((data) => setUserData(data));
-  }, []);
+  // const [userData, setUserData] = useState([]);
+  // useEffect(() => {
+  //   fetch("http://localhost:9292/user")
+  //     .then((response) => response.json())
+  //     .then((data) => setUserData(data));
+  // }, []);
 
-  // const{data: userData, setData: setUserData} = useQuery("http://localhost:9292/user")
+  const{data: userData, setData: setUserData} = useQuery("http://localhost:9292/user")
   const userids = userData.map((item) => item.id);
   let arrlength = userids.length;
   let random = Math.floor(Math.random() * arrlength);

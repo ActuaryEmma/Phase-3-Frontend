@@ -1,19 +1,19 @@
-// import  {useEffect, useState} from'react'
+import  {useEffect, useState} from'react'
 
-// function useQuery(url){
+function useQuery(url){
 
-//     const[data, setData] = useState([])
+    const[data, setData] = useState([])
 
-//     useEffect(() => {
-//         fetch("http://localhost:9292/poemauthor")
-//           .then((response) => response.json())
-//           .then((data) => setData(data));
-//       }, [url]);
+    useEffect(() => {
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => setData(data));
+      }, [url]);
 
-//       return{
-//         data,
-//         setData
-//       }
+      return{
+        data,
+        setData
+      }
 
-// }
-// export default useQuery;
+}
+export default useQuery;
