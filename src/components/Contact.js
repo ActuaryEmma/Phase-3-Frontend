@@ -16,7 +16,7 @@ function Contact(){
                 <div class="text">
                   <h3>Address</h3>
                   <p>
-                    The Dessert Oven and Waken Events , <br />
+                  Write Out Loud , <br />
                     Mutira Building, <br />
                     Ground floor, Kagumo
                     <br />

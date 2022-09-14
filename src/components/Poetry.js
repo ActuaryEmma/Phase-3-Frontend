@@ -7,7 +7,6 @@ import useQuery from "./UseQuery";
 
 function Poetry({ poem, setPoem, commentData, setCommentData }) {
   const [searchItem, setSearchItem] = useState("");
-  const [isEditing, setIsEditing] = useState(false)
 
   // fetch users
   const [userData, setUserData] = useState([]);
@@ -92,7 +91,7 @@ function Poetry({ poem, setPoem, commentData, setCommentData }) {
                         comment={item.comment}
                         commentData={commentData}
                         setCommentData={setCommentData}
-                        setIsEditing={setIsEditing}
+            
                         />
                     
                       

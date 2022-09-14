@@ -30,7 +30,7 @@ The page has details and history about the application:
 ### Contact Page
 The page has contacts that the user can use to contact or has any general information to share with the team:
 
-![Contact image](src/images/Contact.png)
+![contact image](src/images/contact.png)
 
 ### Profile Page
 the app uses a get request to display Biography  of  different Poets:
@@ -44,8 +44,8 @@ The app uses :
 - patch request to update the comments
 - delete request to delete comments plus the author of the comment.
 
-![poet1 image](src/images/poet1.png)  
-![poet2 image](src/images/poet2.png) 
+![poet1 image](src/images/poet1.jpeg)  
+![poet2 image](src/images/poet2.jpeg) 
   
 
 

@@ -25,7 +25,7 @@ function Edit({id,commentBody, setCommentBody, setIsHidden, onHandleUpdateCommen
           .then((response) => response.json())
           .then((data) => onHandleUpdateComment(data));
     
-        // setIsHidden((isHidden) => !isHidden);
+        setIsHidden((isHidden) => !isHidden);
         
       }
     return(

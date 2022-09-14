@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DeleteComment({id, poem, commentData, setCommentData, onDelete, setPoem, poem_id}){
+function DeleteComment({id, poem, setCommentData, poem_id}){
 
     function handleDeleteClick(){
         
