@@ -44,8 +44,8 @@ The app uses :
 - patch request to update the comments
 - delete request to delete comments plus the author of the comment.
 
-![blog1 image](src/images/Blog1.jpeg)  
-![blog2 image](src/images/Blog2.jpeg) 
+![blog1 image](src/images/Blog1.png)  
+![blog2 image](src/images/Blog2.png) 
   
 
 
