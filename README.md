@@ -4,7 +4,7 @@
 https://docs.google.com/document/d/12tnN_YsNtlxVc3M_ZcT0y7T75NORBNb9XtT3ZxoVIS8/edit?usp=sharing
 
 ### Backend github repository
-https://github.com/ActuaryEmma/phase-3-sinatra-react-project
+https://github.com/ActuaryEmma/phase-3-sinatra-react-project/tree/main/backend
 
 
 
