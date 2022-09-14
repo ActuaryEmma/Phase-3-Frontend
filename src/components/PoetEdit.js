@@ -4,10 +4,6 @@ function PoetEdit({ id, poet, setPoet, poempublication }) {
   const [publicationBody, setPublicationBody] = useState(poempublication);
   const [isHide, setIsHide] = useState(true);
 
- 
-
- 
-
   function handleUpdateComment(updatedPublication) {
     const updateComments = poet.map((item) =>
       item.id === updatedPublication.id ? updatedPublication : item
@@ -48,11 +44,7 @@ function PoetEdit({ id, poet, setPoet, poempublication }) {
       .then((data) => handleUpdateComment(data));
 
 
-      setIsHide((isHide) => !isHide);
-    
-      
-      
-      
+      setIsHide((isHide) => !isHide);  
       
   }
 

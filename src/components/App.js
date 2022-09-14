@@ -8,6 +8,7 @@ import NavBar from "./NavBar";
 import About from "./About";
 import Profile from "./Profile";
 import Poetry from "./Poetry";
+import Contact from "./Contact";
 
 
 
@@ -29,7 +30,7 @@ function App() {
         <Route exact path="/about" element={<About />}></Route>
         <Route exact path="/poetry" element={<Poetry poem={poem} setPoem={setPoem} commentData={commentData} setCommentData={setCommentData}/>}></Route>
         <Route exact path="/profile" element={<Profile/>}></Route> 
-        {/* <Route exact path="/contact" element={<Contact/>}></Route> */}
+        <Route exact path="/contact" element={<Contact/>}></Route>
       </Routes>
     </Router>
   );

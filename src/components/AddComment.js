@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 
 function AddComment({poemid, userid, poem, setPoem, commentData, setCommentData}){
+
+
     
     const[newObj, setNewObj] = useState({
        comment: "",
@@ -22,20 +24,12 @@ function AddComment({poemid, userid, poem, setPoem, commentData, setCommentData}
         body: JSON.stringify(newObj)
     })
     .then((response) => response.json())
-    .then((newData) => {
-
-        let x = [...commentData, newData]
-        console.log(x)
-        setCommentData(x)
-        console.log(commentData)
-        
-    } 
-
+    .then((newData) => setCommentData([...commentData, newData]) 
     )
-
     setNewObj({
         comment: ""
     })
+   
     }
     
     return(

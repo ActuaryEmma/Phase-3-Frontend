@@ -2,14 +2,6 @@ import React from 'react';
 
 function DeleteComment({id, poem, commentData, setCommentData, onDelete, setPoem, poem_id}){
 
-    // function handleDelete(deleteComment) {
-    //     console.log(poem_id)
-    //     const updatePoem = poem.find(poem_id).comments.filter(
-    //       (item) => item.id !== deleteComment.id
-    //     );
-    //     setPoem(updatePoem);
-    //   }
-    
     function handleDeleteClick(){
         
         fetch(`http://localhost:9292/poem/comments/${id}`, {
@@ -34,22 +26,12 @@ function DeleteComment({id, poem, commentData, setCommentData, onDelete, setPoem
              console.log(poem)
 
             setCommentData(updateComments);
-            // window.location.reload()
+          
             
             
         })
 
-        // .then(() => {
-        //     console.log(poem)
-        //     console.log(commentData)
-        //     console.log(id)
-        //     const newData = poem.filter((data) => data.id !== id)
-        //     setPoem(newData)
-        //     console.log(newData)
-        //     console.log(poem)
-            
-        
-        // })
+     
     }
     return(
         <div>
