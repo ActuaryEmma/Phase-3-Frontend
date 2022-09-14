@@ -21,20 +21,20 @@ The App has 5 components i.e Home , About , Contact , Profiles and Poetry Blogs.
 ### Home Page
 
 This is the landing page and has a Learn more button which directs you to a Poetry Blog page as below:
-![home image](src/components/images/firstPage.png)
+![home image](src/images/firstPage.png)
 
 ### About Page
 The page has details and history about the application:
-![about image](src/components/images/About.png)
+![about image](src/images/About.png)
 
 ### Contact Page
 The page has contacts that the user can use to contact or has any general information to share with the team:
 
-![contact image](src/components/images/Contact.png)
+![contact image](src/images/Contact.png)
 
 ### Profile Page
 the app uses a get request to display Biography  of  different Poets:
-![profile image](src/components/images/Profile.png) 
+![profile image](src/images/Profile.png) 
 
 ### Poetry Blog
 The page contains list of Poems with comments from users.
@@ -44,8 +44,8 @@ The app uses :
 - patch request to update the comments
 - delete request to delete comments plus the author of the comment.
 
-![poem image](src/components/images/poet1.png)  
-![poem image](src/components/images/poet2.png) 
+![poem image](src/images/poet1.png)  
+![poem image](src/images/poet2.png) 
   
 
 
